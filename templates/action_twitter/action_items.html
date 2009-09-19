@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>All action items</h1>
+	
+	<ul>
+	{% for item in action_items %}
+		<li><a href = "{{ item.slug }}/">{{ item.slug }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

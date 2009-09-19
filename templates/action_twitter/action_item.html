@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{{ action_item.slug }}</h1>
+	<p>Description: {{ action_item.description }}</p>
+	<ul>
+	{% for item in tweets %}
+		<li>{{ item.tweet }} - Posted by {{ item.owner }}</li>
+	{% endfor %}
+	</ul>
+{% endblock %}
